@@ -1,14 +1,9 @@
 import React from 'react';
-import { Col, Row, Form, FormGroup, FormControl, Button, Image } from 'react-bootstrap';
+import { Col, Row, Form, FormGroup, FormControl, Image } from 'react-bootstrap';
 import { Header } from './Header';
 import { Footer } from './Footer';
-import profile from './../../utils/images/profile.svg';
 import plane from './../../utils/images/plane.svg';
-import persistantInactive from './../../utils/images/persistantInactive.svg';
 import menu from './../../utils/images/menu.svg';
-import jenna_logo_small from './../../utils/images/jenna_logo_small.svg';
-import edit from './../../utils/images/edit.svg';
-import spartans from './../../utils/images/spartans.png';
 import MessageComponent from './MessageComponent';
 
 class Chat extends React.Component {

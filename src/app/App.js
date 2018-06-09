@@ -19,22 +19,23 @@ class App extends Component {
   }
 
   sendMessage = (data) => { 
+    this.setState({ messages: [...this.state.messages, data.text]})
     this.props.socket.emit('send message', data);
 
   }
 
   render() {
+
     const { messages } = this.state;
     return (
       <Row>
-        <Col xs={3} xsHidden>
+        <Col xsHidden sm={3}>
           <AsideLeft/>
         </Col>
-        <Col xs={12} md={6} id="chat">
+        <Col xs={12} sm={6} id="chat">
           <Chat submitForm={this.sendMessage} messages={messages}/>
         </Col>
-        <Col xs={3} xsHidden>
-          <AsideLeft/>
+        <Col xsHidden sm={3} className="asside-right">
         </Col>
       </Row>
     );

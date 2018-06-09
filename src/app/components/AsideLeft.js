@@ -6,7 +6,7 @@ import profile from './../../utils/images/profile.svg';
 export const AsideLeft = () => {
 
     return (
-        <Col className="asideLeft">
+        <Col className="aside-left">
             <div className="pen">
                 <Image src={edit}  />
             </div>

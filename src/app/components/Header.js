@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Image, Row } from 'react-bootstrap';
+import { Col, Image } from 'react-bootstrap';
 import spartans from './../../utils/images/spartans.png';
 
 
