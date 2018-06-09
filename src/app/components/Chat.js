@@ -33,13 +33,12 @@ class Chat extends React.Component {
         this.setState({ text: '' });
     }
 
-    // handleKeyPress = (event, target) => {
-    //     console.log(eventtarget)
-    //     if (target.charCode === 13) {
-    //         event.preventDefault();
-    //         this.prepareAndSubmitForm();
-    //     }
-    //   }
+    handleKeyPress = (event)=> {
+		if(event.key === 'Enter') {
+            event.preventDefault()
+			this.prepareAndSubmitForm();
+		}
+	}
 
     render() {
 
@@ -65,6 +64,7 @@ class Chat extends React.Component {
                                         placeholder="Type answer here..."
                                         value={this.state.text}
                                         onChange={this.handleChange}
+                                        onKeyPress={this.handleKeyPress} 
                                     />
                                 </FormGroup>
                             </Col>

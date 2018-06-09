@@ -5,13 +5,12 @@ import jenna_logo_small from './../../utils/images/jenna_logo_small.svg';
 
 class MessageComponent extends React.Component {
 
-    // shouldComponentUpdate(nextProps) {
-    //     if (this.props.messages === nextProps.messages) {
-    //         console.log('daaaaaaaaaaaa')
-    //         return false;
-    //     }
-    //     return true;
-    // }
+    shouldComponentUpdate(nextProps) {
+        if (this.props.messages === nextProps.messages) {
+            return false;
+        }
+        return true;
+    }
 
     content = () => {
         const { messages } = this.props;
@@ -20,7 +19,7 @@ class MessageComponent extends React.Component {
             return messages.map((message, index) => {
                 if (index % 2 === 0) {
                     return (
-                        <div className="wrap">
+                        <div key={index} className="wrap">
                             <div className="bot spartans">
                                 <Image src={spartans} />SPARTANS
                             </div>
@@ -40,7 +39,7 @@ class MessageComponent extends React.Component {
                     )
                 } else {
                     return (
-                        <div className="wrap">
+                        <div key={index} className="wrap">
                             <div className="jena">
                                 <Image src={jenna_logo_small} circle />
                             </div>
